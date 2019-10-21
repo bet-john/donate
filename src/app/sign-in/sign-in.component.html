@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="formContent pt-5 sign-in">
+        <!-- Login Form -->
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+            <input type="text" formControlName="email" placeholder="email">
+            <input type="text" formControlName="password" placeholder="password">
+            <input type="submit" [disabled]="!signInForm.valid" value="Log In">
+        </form>
+        <!-- Remind Passowrd -->
+        <div class="formFooter">
+            <a class="underlineHover" [routerLink]="['/forgot-password']">Forgot Password?</a>
+        </div>
+        <br>
+        <div>Not A Member? <a class="underlineHover" [routerLink]="['/sign-up']" >Register.</a></div>
+        <br>
+    </div>
+</div>

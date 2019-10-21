@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="progress-loader" [hidden]="!loading">
+        <mat-progress-spinner [mode]="'indeterminate'">
+        </mat-progress-spinner>
+    </div>
+    <div class="sign-up">
+        <div *ngIf="information_flag" class="alert alert-danger information-box" role="alert">{{information}}</div>
+        <div class="formContent pt-5">
+            <div>Register Yourself.</div>
+            <!-- Login Form -->
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <input type="text" formControlName="name" placeholder="Name">
+                <input type="text" formControlName="email" placeholder="Email">
+                <input type="text" formControlName="phone_number" placeholder="Contact Number">
+                <input type="text" formControlName="password" placeholder="Password">
+                <input type="submit" [disabled]="!signUpForm.valid" placeholder="Sign Up" value="Sign Up">
+            </form>
+            <div>Already A Member? <a class="underlineHover" [routerLink]="['/sign-in']">Login.</a></div>
+            <br>
+        </div>
+    </div>
+</div>
