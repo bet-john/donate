@@ -1,5 +1,6 @@
 <div class="wrapper">
     <div class="formContent pt-5 sign-in">
+        <div *ngIf="information_flag" class="alert alert-danger information-box" role="alert">{{information}}</div>
         <!-- Login Form -->
         <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
             <input type="text" formControlName="email" placeholder="email">

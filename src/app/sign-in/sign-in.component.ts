@@ -5,8 +5,9 @@ import { Router } from '@angular/router';
 
 export interface success {
   success?: boolean;
-  user_id?: any
-}
+  user_id?: any;
+  error?: string;
+};
 @Component({
   selector: 'app-root',
   templateUrl: './sign-in.component.html',
@@ -16,6 +17,8 @@ export class SignInComponent implements OnInit {
   signInForm: FormGroup;
   success_message: success = {};
   loading?: boolean = false;
+  information_flag?: boolean = false;
+  information?: string = '';
 
   constructor(
     private userService: UserService,
@@ -28,19 +31,24 @@ export class SignInComponent implements OnInit {
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required]],
     });
-  }
+  };
 
   onSubmit() {
-    console.log(this.signInForm.value);
     this.userService.login(this.signInForm.value)
       .subscribe(res => {
         this.success_message = res;
         this.loading = false;
+        this.information_flag = false;
         this.success_message = res;
         if (this.success_message.success) {
           this.router.navigate(['/dashboard'])
         }
         console.log('this.success_message', this.success_message)
-      })
-  }
-}
+      }, (response_error) => {
+        this.loading = false;
+        this.success_message = response_error.error;
+        this.information_flag = true;
+        if (this.success_message.error) { this.information = this.success_message.error; };
+      });
+  };
+};

@@ -32,7 +32,7 @@ export class SignUpComponent implements OnInit {
       phone_number: [null, [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       password: [null, [Validators.required, Validators.minLength(4)]],
     });
-  }
+  };
 
   onSubmit() {
     console.log(this.signUpForm.value);
@@ -51,4 +51,4 @@ export class SignUpComponent implements OnInit {
           if (this.success_message.error) { this.information = this.success_message.error; };
         });
   };
-}
+};
