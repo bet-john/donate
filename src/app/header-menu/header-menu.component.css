@@ -12,7 +12,7 @@ html {
     color: #92badd;
     display:inline-block;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 800;
   }
   
   h2 {
@@ -38,20 +38,7 @@ html {
     min-height: 100%;
     padding: 20px;
   }
-  
-  .formContent {
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-    background: #fff;
-    padding: 30px;
-    width: 90%;
-    max-width: 739px;
-    position: relative;
-    padding: 50px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    text-align: center;
-  }
+
   .headerContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
@@ -268,11 +255,7 @@ html {
   #icon {
     width:60%;
   }
-  .dashboard {
-      position: relative;
-      top: 12em;
-  }
-  .dashboard-header {
+  .header {
     position: relative;
     top: 2em;
 }

@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<app-header-menu></app-header-menu>
+<div class="wrapper">
+    <div *ngIf="information_flag" class="alert alert-danger information-box" role="alert">{{information}}</div>
+    <div class="formContent pt-5 dashboard">
+        <br>
+        <div class="float-left col-sm-12">Hi, <a class="underlineHover" [routerLink]="['/dashboard']"> {{name}}</a></div>
+        <br>
+        <form [formGroup]="dashboardForm" (ngSubmit)="onSubmit()">
+            <input type="submit" [disabled]="!dashboardForm.valid" value="Donate?">
+            <div>OR</div>
+            <br>
+            <input type="submit" [disabled]="!dashboardForm.valid" value="Blood Bank?">
+        </form>
+    </div>
+</div>

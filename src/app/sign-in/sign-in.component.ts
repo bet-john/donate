@@ -35,11 +35,10 @@ export class SignInComponent implements OnInit {
 
   onSubmit() {
     this.userService.login(this.signInForm.value)
-      .subscribe(res => {
-        this.success_message = res;
+      .subscribe(response_success => {
+        this.success_message = response_success;
         this.loading = false;
         this.information_flag = false;
-        this.success_message = res;
         if (this.success_message.success) {
           this.router.navigate(['/dashboard'])
         }

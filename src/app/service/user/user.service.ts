@@ -17,4 +17,7 @@ export class UserService {
   login(Data): Observable<success> {
     return this.http.post<success>(`${this.uri}/sessions`, Data);
   };
+  forgotPassword(Data): Observable<success> {
+    return this.http.post<success>(`${this.uri}/forgot-password`, Data);
+  };
 }

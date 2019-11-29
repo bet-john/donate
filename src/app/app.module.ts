@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { UserService } from './service/user/user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule
+  ],
+  entryComponents:[
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
