@@ -4,12 +4,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
-
+import { WhyUsComponent } from './why-us/why-us.component';
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'why-us', component: WhyUsComponent},
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' }
 
 ];

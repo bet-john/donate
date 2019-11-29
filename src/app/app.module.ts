@@ -12,6 +12,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { UserService } from './service/user/user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { WhyUsComponent } from './why-us/why-us.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
     ForgotPasswordComponent,
     DashboardComponent,
     HeaderMenuComponent,
+    WhyUsComponent,
   ],
   imports: [
     BrowserModule,
